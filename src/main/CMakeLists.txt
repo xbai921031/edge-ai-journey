@@ -1,0 +1,31 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "app_fs.c"
+        "edge_agent_version.c"
+        "http_server_adapter.c"
+        "lcd/lcd.c"
+        "ui/display.c"
+        "ui/lv_font_source_han_sans_sc_20_cjk.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        app_claw
+        app_config
+        settings
+        claw_ramfs
+        claw_utils
+        official_http_server
+        lvgl
+        esp_wifi
+        esp_netif
+        esp_event
+        nvs_flash
+        fatfs
+        vfs
+        wear_levelling
+        cjson
+    PRIV_REQUIRES
+        esp_system
+        esp_app_format
+)
